@@ -1,6 +1,13 @@
 name: cmake-build
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:  # 添加这个行来支持手动触发
 
 env:
   BUILD_TYPE: Release
